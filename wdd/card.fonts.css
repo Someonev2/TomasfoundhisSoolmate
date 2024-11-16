@@ -1,0 +1,266 @@
+:root {--font-size: 10px;}
+html.big:root {--font-size: 11px;}
+html.big2:root {--font-size: 12px;}
+
+
+
+.font_yeon { font-family: 'Yeon Sung', cursive; }
+.ft-yeonsung { font-family: 'Yeon Sung', cursive; }
+
+.ft-notosans, .ft-notosans { font-family: 'Noto Sans KR', sans-serif; }
+.ft-myeongjo, .ft-myeongjo { font-family: 'Nanum Myeongjo', serif; }
+.ft-ridibatang, .ft-ridibatang { font-family: 'RIDIBatang', 'Noto Serif KR', serif; font-weight: 400; }
+
+.ft-twindround, .ft-twindround {
+    font-family: 'TmoneyRoundWind', 'Noto Serif KR', serif;
+    font-weight: 400; letter-spacing: -0.5px;
+}
+
+.ft-gowundodum { font-family: 'Gowun Dodum', sans-serif; }
+
+.ft-gowundodum *:not(.ft-gowun-bold) { -webkit-text-stroke: .2px; }
+.ft-gowundodum .ft-gowun-bold * { -webkit-text-stroke: 0; }
+.ft-gowundodum .ft-gowun-bold { -webkit-text-stroke: 0; }
+.ft-gowundodum i { -webkit-text-stroke: 0 !important; }
+
+.ft-sunbatang { font-family: 'SunBatang-Light'; }
+.ft-iropkebatang { font-family: 'Iropke Batang'; }
+
+
+
+/* 오프닝 애니메이션 타이핑 */
+.typing {font-size: 1.6rem; letter-spacing: -1px;}
+
+/* 레이어별 타이블 */
+.sectionHead .name {font-size: 1.8rem; }
+/* 메인사진 */
+.layer01 .title { font-size: 1.65rem; font-weight: 500; letter-spacing: -1px;}
+.layer01 .bottom .bottom_top_text { font-size: 1.45rem;}
+/* 인사말 */
+.introLayer .introMent {font-size: 1.4rem; letter-spacing: -0.5px;}
+.introLayer .title2 {font-size: 1.4rem;}
+.introLayer .title2 > strong {font-size: 1.5rem; font-weight: 500;}
+
+.subTitle.v2 {font-size: 1.4rem; font-weight: 500; letter-spacing: -0.25px;}
+/* 오시는길 */
+.sectionHead .desc { font-size: 1.4rem; }
+.sectionHead .desc .emp {font-size: 2rem;letter-spacing: 0px; font-weight:600;}
+ul.wayto li.li {font-size: 1.3rem;}
+ul.wayto li.li .n {font-size: 1.4rem; font-weight: 400;}
+/* 공지사항 */
+.notibox .title {font-size: 1.4rem;}
+.notibox .note {font-size: 1.3rem; line-height: 1.6;}
+/* 계좌번호 */
+.accst02 .pack {font-size: 1.4rem;}
+.accst02 .pack_wrap .c > li {font-size: 1.2rem;}
+.accst02 .pack_wrap .c > li .b_1 {font-size: 1.2rem;}
+/* 연락하기 */
+ul.contactus.v2 li .t2 {font-size: 1.5rem;}
+.subTitle.hongu {font-size: 1.4rem;}
+ul.contactus.v2 li .t1 {font-size: 1.3rem;}
+ul.contactus.v2.sub li .t2 {font-size: 1.3rem; color: #333;}
+ul.contactus.v2.sub li .t2 strong {font-size: 1.3rem; color: #000;}
+ul li .bttn {font-size: 1.2rem;}
+/* 방명록 + 참석의사전달하기 */
+.private-books-one .nt {font-size: 1.4rem;}
+.private-books .wrt {font-size: 1.4rem;}
+.private-attend-one .nt {font-size: 1.4rem;}
+.private-attend .wrt {font-size: 1.4rem;}
+
+.books li {font-size: 12px; }
+.books li .n {line-height: 1.7;-webkit-line-clamp: 7; margin-top: 5px;}
+.books li .b {padding: 15px 8px 10px 8px;}
+.books li .bottom {font-size: 12px;}
+/* 하단사진문구 */
+.banner01 .cover {font-size: 1.2rem;}
+.shareK {font-size: 1.3rem;}
+
+.sectionMg .noticeBtn {font-size: 1.3rem;}
+
+.ft-yeonsung .sectionMg .noticeBtn {font-size: 1.6rem;}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.ft-notosans .layer01 .title { font-weight: bold; }
+.ft-notosans .introLayer .introMent { letter-spacing: 0px; }
+.ft-notosans .caltit { font-weight: bold; }
+.ft-notosans .subTitle.v2 { font-weight: bold; }
+.ft-notosans .sectionHead .desc .emp { font-weight: bold; }
+.ft-notosans .books li .n {line-height: 1.6;-webkit-line-clamp: 6; margin-top: 5px;}
+
+.ft-twindround .private-attend-one .nt {line-height: 1.6;}
+
+
+/**************************************************************************/
+/** 고운돋움체  **/
+/**************************************************************************/
+
+.ft-gowundodum .layer01 .title { font-weight: bold; }
+.ft-gowundodum .caltit { font-weight: bold; }
+.ft-gowundodum .caltit .caltit_add {font-weight: 400; }
+.ft-gowundodum .subTitle.v2 { font-weight: bold; }
+.ft-gowundodum ul.wayto li.li .n { font-weight: bold; }
+.ft-gowundodum .notibox .title { font-weight: bold; }
+
+/**************************************************************************/
+/** 이롭게바탕  **/
+/**************************************************************************/
+
+.ft-iropkebatang .layer01 .title { font-weight: bold; }
+.ft-iropkebatang .caltit { font-weight: bold; }
+.ft-iropkebatang .subTitle.v2 { font-weight: bold; }
+.ft-iropkebatang ul.wayto li.li .n { font-weight: bold; }
+.ft-iropkebatang .notibox .title { font-weight: bold; }
+
+.ft-iropkebatang .caltit .caltit_add {font-weight: 400;}
+
+
+/**************************************************************************/
+/** Yeonsung 연성체  **/
+/**************************************************************************/
+
+.ft-yeonsung .kkt-share {font-family: 'RIDIBatang';}
+
+/* 배경음악 자동재생 안내 */
+.ft-yeonsung .bgmbar > p {font-size: 1.4rem;}
+
+.ft-yeonsung .more_map_link { font-size: 1.5rem; }
+.ft-yeonsung .typing {font-size: 2rem; font-weight: normal; letter-spacing: 0px;}
+/* 레이어별 타이블 */
+.ft-yeonsung .sectionHead .name {font-size: 2.4rem; letter-spacing: 0px;}
+/* 메인사진 */
+.ft-yeonsung .layer01 .title { font-size: 2rem; font-weight: 400; letter-spacing: 0px; }
+.ft-yeonsung .layer01 .bottom .bottom_top_text { font-size: 1.8rem;}
+/* 인사말 */
+.ft-yeonsung .introLayer .introMent {font-size: 1.7rem; letter-spacing: 0px;}
+.ft-yeonsung .introLayer .title2 {font-size: 1.7rem;}
+.ft-yeonsung .introLayer .title2 > strong {font-size: 18px;}
+/* 캘린더 */
+.ft-yeonsung .caltit {font-size: 2rem; letter-spacing: 0px;}
+.ft-yeonsung .caltit > .caltit_add {font-size: 1.7rem; margin-top: 10px; }
+.ft-yeonsung .calander th  {font-size: 1.4rem; letter-spacing: 0px;}
+.ft-yeonsung .calander td {font-size: 1.4rem; letter-spacing: 0px;}
+.ft-yeonsung .subTitle.v2 {font-size: 1.8rem; letter-spacing: 0px;}
+/* 오시는길 */
+.ft-yeonsung .sectionHead .desc {font-size: 1.4rem;}
+.ft-yeonsung .sectionHead .desc .emp {font-size: 2.6rem; letter-spacing: 0px; font-weight: 400;}
+.ft-yeonsung ul.wayto li.li {font-size: 1.6rem;}
+.ft-yeonsung ul.wayto li.li .n {font-size: 1.8rem; font-weight: bold;}
+/* 공지사항 */
+.ft-yeonsung .notibox .title {font-size: 1.8rem;}
+.ft-yeonsung .notibox .note {font-size: 1.6rem; line-height: 1.4;}
+/* 계좌번호 */
+.ft-yeonsung .accst02 .pack {font-size: 1.7rem;}
+.ft-yeonsung .accst02 .pack_wrap .c > li {font-size: 1.2rem;}
+.ft-yeonsung .accst02 .pack_wrap .c > li .b_1 {font-size: 1.2rem;}
+/* 연락하기 */
+.ft-yeonsung ul.contactus.v2 li .t2 {font-size: 1.8rem;}
+.ft-yeonsung .subTitle.hongu {font-size: 1.8rem;}
+.ft-yeonsung ul.contactus.v2 li .t1 {font-size: 1.5rem;}
+.ft-yeonsung ul.contactus.v2.sub li .t2 {font-size: 1.6rem;}
+.ft-yeonsung ul.contactus.v2.sub li .t2 strong {font-size: 1.6rem;}
+
+/* 방명록 + 참석의사전달하기 */
+.ft-yeonsung .private-books-one .nt {font-size: 1.6rem;}
+.ft-yeonsung .private-books .wrt {font-size: 1.6rem;}
+.ft-yeonsung .private-attend-one .nt {font-size: 1.6rem;}
+.ft-yeonsung .private-attend .wrt {font-size: 1.6rem;}
+
+.ft-yeonsung .books li {font-size: 15px;}
+.ft-yeonsung .books li .n {line-height: 1.6; -webkit-line-clamp: 6; margin-top: 0;}
+.ft-yeonsung .books li .b {padding: 10px 8px;}
+.ft-yeonsung .books li .bottom {font-size: 13px;}
+/* 하단사진문구 */
+.ft-yeonsung .banner01 .cover {font-size: 1.5rem;}
+.ft-yeonsung .shareK {font-size: 1.6rem;}
+
+
+
+/* 메인화면2 스타일 */
+.ft-yeonsung .main_frm_ver_2 .desc2 {
+    font-size: 1.7rem;
+}
+.ft-yeonsung .main_frm_ver_2 .desc3 {
+    font-size: 1.7rem;
+    letter-spacing: -0.25px;
+    line-height: 1.5;
+}
+.ft-yeonsung .int_buttn {font-size: 1.6rem;}
+.ft-yeonsung .sectionDesc { font-size: 1.6rem; }
+
+
+
+.ft-yeonsung .mainLayer .inr .row-03 .g-wrap .g {
+    font-size: 1.9rem;
+}
+.ft-yeonsung .mainLayer .inr .row-03 .g2-wrap {
+    font-size: 1.6rem;
+}
+
+
+
+
+/*******************************/
+.ft-ridibatang .ch_top .top .sub {
+    letter-spacing: -1px; font-size: 12px; font-family: 'RIDIBatang', 'Noto Serif KR', serif !important;
+}
+.ft-ridibatang .ch_top .top .date {
+    letter-spacing: -2px; font-family: 'RIDIBatang', 'Noto Serif KR', serif !important;
+}
+
+.ft-notosans .ch_top .top .sub {
+    letter-spacing: -1px; font-size: 12px; font-family: 'Noto Sans KR', sans-serif !important;
+}
+.ft-notosans .ch_top .top .date {
+    letter-spacing: -2px; font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.ft-twindround .ch_top .top .sub {
+    letter-spacing: -1px; font-size: 12px; font-family: 'TmoneyRoundWind', sans-serif !important;
+}
+.ft-twindround .ch_top .top .date {
+    letter-spacing: -2px; font-family: 'TmoneyRoundWind', sans-serif !important;
+}
+
+.ft-gowundodum .ch_top .top .sub {
+    letter-spacing: -0.5px; font-size: 12px; font-weight: bold;
+}
+.ft-gowundodum .ch_top .top .date {
+    letter-spacing: -2px;
+}
+
+.ft-iropkebatang .ch_top .top .sub {
+    letter-spacing: -0.5px; font-size: 12px; font-weight: bold;
+}
+.ft-iropkebatang .ch_top .top .date {
+    letter-spacing: -2px;
+}
+
+.ft-yeonsung .t-btn { font-size: 1.6rem; }
+.ft-yeonsung #interview_pop .tp { font-size: 20px; }
+.ft-yeonsung ul.interview > li.more { font-size: 1.6rem; }
+
+.ft-yeonsung ul.interview > li > .q { font-size: 1.7rem; }
+.ft-yeonsung ul.interview > li > .a { font-size: 1.6rem; }
+
+
+.ft-yeonsung .mainLayer .inr .row-03 .g-wrap .g { font-size: 2rem; }
+.ft-yeonsung .mainLayer .inr .row-03 .g2-wrap { font-size: 1.7rem; }
+.ft-yeonsung .caltit > .caltit_add {font-size: 1.8rem; }
+.ft-yeonsung .calander th {font-size: 1.7rem;}
+.ft-yeonsung .calander td {font-size: 1.6rem;}
+
+.ft-yeonsung .caltit .caltit_tit { font-size: 2.2rem; }
+
+.ft-yeonsung .list-books .books-w {font-size: 1.6rem !important;}
+
+.ft-yeonsung .location_wrapper .tbox.emp { font-size: 2.4rem; } 
