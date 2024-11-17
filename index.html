@@ -90,8 +90,7 @@
 
     
     <script type="text/javascript">
-        // 안드로이드 우측 버튼 비활성
-        $('.imgblk').bind("contextmenu", function (e) { return false; });
+             $('.imgblk').bind("contextmenu", function (e) { return false; });
     </script>
     
 </head>
@@ -115,9 +114,7 @@ function loading(go) {
      
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.14/lottie.min.js"></script>
 <div id="all_splash_wrapper">
-    <!--
-    == V1 오프닝 애니메이션
-    -->
+   
                     <div class="">
             <div class="splash trans" style="display: block;">
                 <div class="ct">
@@ -130,15 +127,8 @@ function loading(go) {
             </div>
         </div>
     </div>
-    <!--
-    == V2
-    -->
-    </div>
+</div>
 
-
-
-
-    <!-- 계좌번호 복사 팝업 -->
 <div class="pop_acct ft-gowun-bold" id="acctBox" style="display: none;">
     <div class="vcenterbox">
         <div class="bx">
@@ -154,10 +144,7 @@ function loading(go) {
 </div>
 
 <div class="popImg">
-    <!--<a class="down_button">
-        <svg fill="#cccccc" width="45" height="45" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256,409.7,152.05,305.75,173.5,284.3l67.33,67.32V34h30.34V351.62L338.5,284.3,360,305.75ZM445.92,351v93.22a3.61,3.61,0,0,1-3.47,3.48H69.15a3.3,3.3,0,0,1-3.07-3.48V351H35.74v93.22A33.66,33.66,0,0,0,69.15,478h373.3a33.85,33.85,0,0,0,33.81-33.82V351Z"/></svg>
-    </a>-->
-    <a class="x_button">
+       <a class="x_button">
         <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.86018 16.829L16.3455 8.34375" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
             <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -294,7 +281,7 @@ $(".popAlert .background, .popAlert button").click(function(){
                         <div class="grd">
                 <span class="cell">신부</span>
                 <span class="cell name">
-                    <span>AliceAn</span>
+                    <span class="names">AliceAn</span>
                     <span class="baptismal"></span>
                 </span>
                 <span class="cell">
@@ -311,7 +298,7 @@ $(".popAlert .background, .popAlert button").click(function(){
                                 <div class="grd">
                     <span class="cell">신랑</span>
                     <span class="cell name">
-                        <span>TomasVenegas</span>
+                        <span class="names">TomasVenegas</span>
                         <span class="baptismal"></span>
                     </span>
                     <span class="cell">
@@ -340,12 +327,12 @@ $("#tel_popup .x_button").click(function(){
     <div class="inr  expand light ">
 
                     <div class="row-01">
-                                    <div class="g-wrap" style="color:">
-                        <span style="color: " class="g">Tomas Scott Venegas</span><br/>
-                        <span style="color: " class="g dot">♥</span><br/>
-                        <span style="color: " class="g">Alice 수현 An</span>
+                                    <div class="g-wrap">
+                        <span class="g">Tomas Scott Venegas</span><br/>
+                        <span class="g dot">♥</span><br/>
+                        <span class="g">Alice 수현 An</span>
                     </div>
-                    <div class="g2-wrap" style="color: ">Saturday, 29th of March 2025 <br/> </div>
+                    <div class="g2-wrap">Saturday, 29th of March 2025 <br/> </div>
                     </div>
         
         <div class="row-02">
@@ -894,7 +881,7 @@ $(document).ready(function(){
     <div class="banner01 fixed" style="background-image: url('https://images.theirmood.com/resources/66285/card/NAJU1YvpQU/DlS0wP2H6D.jpg?f=webp&amp;w=1280');">
          
         <div class="cover" style="overflow: hidden;">
-            <div class="vcenterbox" style="text-align: ">
+            <div class="vcenterbox">
                 <p>We appreciate your continuous support for us.</p>            </div>
         </div>
     </div>
@@ -913,20 +900,7 @@ $(document).ready(function(){
 
 </div>
 
- 
-
-    <!-- 하단 -->
-    <!--
-    <div style="text-align: center;" class="ft-gowun-bold">
-        <div id="kakao-link-btn" onclick="sendLink()" style="padding: 30px 0 10px 0; margin-bottom: -10px; position: relative; z-index: 10; cursor: pointer;">
-            <a class="kkt-share">카카오톡으로 초대장 보내기</a>
-            <input type="hidden" name="kt_01" value="웨딩청접장"/>
-            <input type="hidden" name="kt_02" value="Alice랑 Scott의 결혼식에 초대합니다"/>
-        </div>
-    </div>
-    -->
-    
-   
+  
 </div>
 
 
@@ -943,7 +917,7 @@ $(document).ready(function(){
 <script style="text/javascript" src="wdd/card.show.opening.js?time=28"></script>
 
 
-    <!-- 하단 -->
+ 
 <script>
 function snowfallevt() {
     $(".pageCover").snowfall({
@@ -985,7 +959,7 @@ $(document).ready(function(){
                     });
                 }
             }else{
-                //console.log("배경이펙트 종료");
+            
                 $(".bgeffectVal").css("display", "none");
                 if(bgeffSnow) {
                     $('.pageCover').snowfall('clear');
@@ -998,37 +972,13 @@ $(document).ready(function(){
 
 <script>
 
-//=============================================
-// 축하화환 처리
-
-
-
     activateSplash('v1', false, false);
 
-//=============================================
-// 캘린더
 
 function initCalander() {
-/*
-    let lastDate = new Date('2025', '3', 0);
-    var lastDay = lastDate.getDate();
-
-    console.log("lastDate:"+lastDate.getDay());
-    console.log("lastDay:"+lastDay);
-
-    var week = new Array(0, 1, 2, 3, 4, 5, 6);
-    var marriedDate = new Date('2025-03-01').getDay();
-    var todayLabel = week[marriedDate];
-
-    console.log(marriedDate);
-    console.log(todayLabel);
-*/
 
     var lastDate = moment('2025-03-01').locale('en-AU');
     var lastDay = parseInt(lastDate.endOf('month').format('D'));
-
-    //console.log("lastDate:"+lastDate.format());
-    //console.log("lastDay:"+lastDay);
 
     var week = new Array(0, 1, 2, 3, 4, 5, 6);
     var marriedDate = new moment('2025-03-01').locale('en-AU').day();
@@ -1078,10 +1028,10 @@ $(document).ready(function(){
             url : '/holiday',
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success : function(data){
-                //console.log(data);
+              
 
                 $(data).each(function(idx,val){
-                    //console.log(val.day);
+                    
                     $(".cal_tr_td_"+val.day).css("color", "var(--main-sun-day-color)");
                 });
             }
@@ -1089,25 +1039,8 @@ $(document).ready(function(){
     }
 });
 
-
-
-//=============================================
-// 식전영상
-//Youtube API 로드
-
-
-//=============================================
-// 오시는길 네이버지도
-
-
-
-//=============================================
-// 갤러리
-
-
 function swipeGallery01() {
     var imglen= $("#swipelistid > .swiper-slide").length;
-    //console.log('이미지 갯수: '+imglen);
     if(imglen>1) {
         const imgList = document.querySelectorAll(`#swipelistid [data-order] img`)
         new Swiper(".mySwiper", {
@@ -1260,196 +1193,11 @@ $(document).ready(function() {
 
 });
 
-
-//=============================================
-// 방명록
-
-    $(document).ready(function() {
-        $('.anibox_books').addClass("hd").viewportChecker({
-            classToAdd: 'visible animated faster fadeInUp',
-            offset: 100
-        });
-    });
-
-            //var myUid = '00';
-        var cardUid = '66285';
-
-    var loadBooksAnysc = true;
-    var booksPage = 0;
-
-
-    function loadBooks() {
-
-        if(!loadBooksAnysc) { console.log('방명록 목록을 가져오는 중입니다..'); return; }
-        loadBooksAnysc = false;
-
-        booksPage++;
-        $.ajax({
-            type : 'get',
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            data : {
-                "page" : booksPage
-            },
-            url : '/card-books/NAJU1YvpQU',
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            success : function(data){
-
-                if(booksPage >= data.page.endPageNum) {
-                    $("#more-btn-books-by").detach(); // 더보기 버튼 삭제
-                }
-
-                var c = '';
-                $.each(data.books, function(idx, val){
-
-                    //console.log(val);
-                    var note = encodeURIComponent(val.note);
-
-                    c += '<li>';
-                    c += '<div class="top clearfix"> ';
-                    c += '<span class="nam"><b>'+val.name+'</b></span>';
-                    c += '<a class="att right cls" onclick="deBooks(this)" data-idx="'+val.idx+'"><b><i class="fa fa-times-circle"></i></b></a>';
-                    if(false ) {
-                        c += '<span class="right date">'+val.created_at+'</span>';
-                    }
-                    c += '</div>';
-                    c += '<div class="mid clearfix">';
-                    c += '<p><xmp>'+val.note+'</xmp></p>';
-                    c += '</div>';
-                    c += '</li>';
-                    c += '';
-
-                });
-                $("#load-books-by").append(c);
-
-                loadBooksAnysc = true;
-
-            }
-        });
-    }
-
-    function deBooks(i) {
-        
-        var pw = '';
-        var idx = $(i).attr("data-idx");
-
-        //if(myUid != cardUid) {
-            pw = window.prompt('방명록을 작성할 때 입력하신 비밀번호를 입력하세요','');
-            if(pw==null||pw=="") { return; }
-        //}else{
-        //    if(!window.confirm('정말로 삭제하시겠습니까?','')) { return; }
-        // }
-
-        $.ajax({
-            type : 'delete',
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            data : {
-                "password" : pw,
-                "idx" : idx
-            },
-            url : '/card-books/NAJU1YvpQU',
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            success : function(data){
-
-                if(data) {
-                    alert("삭제 되었습니다.");
-                    location.reload();
-                }else{
-                    alert("비밀번호가 일치하지 않아 삭제할 수 없습니다.");
-                }
-
-            },
-            error : function(err) {
-                alert("삭제 중에 문제가 발생했습니다.\r\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
-            }
-        });
-    }
-
-
-    if($(".books-swiper").is(":visible")) {
-        new Swiper('.books-swiper', {
-            slidesPerView: "auto",
-            spaceBetween: 10,
-            pagination: {
-                el: ".books-swiper .swiper-pagination",
-                clickable: true,
-            },
-        });
-    }
-
-
-    loadBooks();
-
-
-
-    gubook_write_sctop = 0;
-
-    // 방명록 전체보기 팝업 열기
-    $(".books-all > a.a, #books-all-open").click(function(){ gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%"); $("html,body").css("overflow-y", "hidden"); $("#gustbk_list").css("display", "block"); });
-
-    // 방명록 작성 팝업 열기
-    $("#books-write-open, .books-all > a.w").click(function(){ gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%"); $("html,body").css("overflow-y", "hidden"); $("#gustbk_op").css("display", "block"); });
-
-    // 팝업 닫기
-    $("#gustbk_list .clse, #gustbk_op .clse").click(function(){ $("html,body").css("height", "auto"); $("html,body").css("overflow-y", "visible");$("html, body").animate({scrollTop: gubook_write_sctop},10);$(this).parents(".wpopclass").css("display", "none"); });
-
-    // 방명록 삭제 버튼 클릭
-    $(".books-swiper .swiper-slide .close").click(function(){ deBooks(this); });
-
-    var isBooksWriteLoading = false;
-
-    // 방명록 작성하기 버튼 클릭
-    $("#gustbk_op .att-fdver-btn").click(function(){
-
-        
-        var data = $("#gustbk_op form").serializeObject();
-        if(!check.isNotNull(data.name)) {alert("이름을 입력해주세요.");return;}
-        if(!check.isNotNull(data.password)) {alert("비밀번호를 입력해주세요.");return;}
-        if(!check.isNotNull(data.note)) {alert("방명록 내용을 입력해주세요.");return;}
-
-        data.name = data.name.trim();
-        if(data.name.length<1) {
-            alert("이름은 1글자 이상 입력해주세요."); return;
-        }
-
-        data.password = data.password.trim();
-        if(data.password.length<4) {
-            alert("비밀번호는 4글자 이상 입력해주세요."); return;
-        }
-
-        if(!isBooksWriteLoading) {
-            isBooksWriteLoading = true;
-            loading(true);
-            $.ajax({
-                type : 'post',
-                //dataType : "text",
-                //contentType : "application/json; charset=utf-8",
-                data : data,
-                //async : false,
-                url : '/card-books/NAJU1YvpQU',
-                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                success : function(data){
-                    loading(false);
-                    location.reload();
-                },
-                error : function(err) {
-                    loading(false);
-                    isBooksWriteLoading = false;
-                    console.log(err);
-                    alert("등록 중에 문제가 발생했습니다.\r\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
-                }
-            });
-        }
-
-    });
 </script>
 
-<!-- 구글 맵 -->
-
-    <!-- SP -->
-<!-- ************************************************************* -->
 
     <script>
-        // img 찾을 때 적용 필요 없는 이미지 필터링 필요
+        
 
         let lastTouchEnd = 0;
 
@@ -1472,23 +1220,21 @@ $(document).ready(function() {
         }
 
         function checkZoomLevel() {
-            // 페이지 확대 상태를 감지
             const scale = window.visualViewport ? window.visualViewport.scale : 1;
             if (scale > 1) {
-                blurImages();  // 확대 상태라면 blur 적용
+                blurImages();
             } else {
-                unblurImages();  // 확대 상태가 아니라면 blur 제거
+                unblurImages();
             }
         }
 
-        // touchmove 이벤트로 확대 상태를 감지하여 blur 처리
+        
         window.addEventListener('touchmove', function (event) {
             if (event.touches.length > 1) {
                 checkZoomLevel();
             }
         });
 
-        // touchend 이벤트로 확대 상태를 감지하여 blur 처리
         window.addEventListener('touchend', function (event) {
             let now = (new Date()).getTime();
             if (now - lastTouchEnd <= 300) {
@@ -1497,7 +1243,6 @@ $(document).ready(function() {
             lastTouchEnd = now;
         });
 
-        // gesturestart 및 gestureend 이벤트로 확대 상태를 감지하여 blur 처리
         window.addEventListener('gesturestart', blurImages);
         window.addEventListener('gestureend', checkZoomLevel);
     </script>
