@@ -537,8 +537,8 @@ function closeModal() {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="dietary">Any suggestion for your dietary requirements?</label>
-                    <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
+                    <label for="dietary">Let us know you dietary requirements</label>
+                    <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Tell us" optional>
                 </div>
                 <button type="submit" class="submit-button">Submit RSVP</button>
             </form>
@@ -579,9 +579,9 @@ function closeModal() {
     function updateDietaryPlaceholder(hasPlusOne) {
     const dietaryInput = document.getElementById("dietary");
     if (hasPlusOne) {
-        dietaryInput.placeholder = "Any suggestions for your dietary requirements and/or your plus one?";
+        dietaryInput.placeholder = "tell us your dietary requirements and/or your plus one";
     } else {
-        dietaryInput.placeholder = "Any suggestions for your dietary requirements?";
+        dietaryInput.placeholder = "tell us your dietary requirements";
     }
 }
 
