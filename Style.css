@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Sour+Gummy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
 
 html {
      touch-action: pan-x pan-y;
@@ -45,7 +46,12 @@ html {
 
 .calander{
   font-family: 'Nanum Pen Script', cursive;
-  font-size: 30px;
+  font-size: 50px;
+}
+
+.g{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 160px;
 }
 
 /* Apply Sour Gummy font to 'GALLERY' */
@@ -1075,5 +1081,5 @@ ul.books li .b.video .bottom > span {
 }
 
 .submit-button:hover {
-  background-color: #fadcda;
+  background-color: #fc9a93;
 }
