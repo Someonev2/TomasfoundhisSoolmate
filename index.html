@@ -43,16 +43,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
-
-
     <!-- Font 정의 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" type="text/css" href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 <link rel="stylesheet" href="Style.css">
-
-<? /*  */ ?>
 
 <!-- NotoSanse 기본 탑재 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
@@ -222,101 +218,6 @@ var mySwiper = new Swiper ('#roughMapContainer', {
             minRatio: 1
         },
     })
-</script>
-
-<div class="popAlert pop-design">
-    <div class="background"></div>
-    <div class="in">
-        <div class="title">
-            앱이 설치되어 있지 않은 경우 길 안내가 실행되지 않을 수 있습니다
-        </div>
-        <div class="btns">
-            <button>확인</button>
-        </div>
-    </div>
-</div>
-
-<div class="popAlert pop-design acc_copy">
-    <div class="background"></div>
-    <div class="in">
-        <div class="title">Copied</div>
-        <div class="btns">
-            <button>Confirm</button>
-        </div>
-    </div>
-</div>
-<script>
-function openAlert(txt) {
-    $(".popAlert .title").text(txt);
-    $(".popAlert").css("display", "block");
-}
-$(".popAlert .background, .popAlert button").click(function(){
-    $(".popAlert").css("display", "none");
-    if(isAcctBox) {
-        document.querySelector(`#acctBox`).style.display = 'block'
-    }
-});
-</script>
-
-<div id="tel_popup">
-    <a class="x_button">
-        <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.86018 16.829L16.3455 8.34375" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </a>
-    <div class="background"></div>
-
-    <div class="tp">
-                    <span class="ent">CONTACT</span>
-            <div>연락하기</div>
-            </div>
-
-    <div class="ctt">
-
-        
-                <div class="grd_wrap man">
-            <div class="grd_line">
-                신부측 <span class="ent">BRIDE</span>
-            </div>
-                        <div class="grd">
-                <span class="cell">신부</span>
-                <span class="cell name">
-                    <span class="names">AliceAn</span>
-                    <span class="baptismal"></span>
-                </span>
-                <span class="cell">
-                    <a class="fa fa-phone-alt" href="tel:+61 409544921"></a>
-                    <a class="fa fa-envelope" href="sms:+61 409544921"></a>
-                </span>
-            </div>
-                                            </div>
-        
-                                <div class="grd_wrap man">
-                <div class="grd_line">
-                    신랑측 <span class="ent">GROOM</span>
-                </div>
-                                <div class="grd">
-                    <span class="cell">신랑</span>
-                    <span class="cell name">
-                        <span class="names">TomasVenegas</span>
-                        <span class="baptismal"></span>
-                    </span>
-                    <span class="cell">
-                        <a class="fa fa-phone-alt" href="tel:+61 415531827"></a>
-                        <a class="fa fa-envelope" href="sms:+61 415531827"></a>
-                    </span>
-                </div>
-            </div>
-
-    </div>
-</div>
-<script>
-$("#tel_popup .x_button").click(function(){
-    $("body").removeClass("pop_contact_open");
-    $('html,body').css("overflow", "");
-    window.scrollTo(0, WIN_SCR_TOP);
-});
 </script>
 
 <div class="pageCover clearfix sk2">
@@ -822,12 +723,12 @@ $(document).ready(function(){
 
 <div class="sectionMg layer layer02 clearfix acctSection" id="layer_acc_id">
 
-        <div class="lai_1">
-        <div class="sectionHead anibox">
-            <div class="inv">마음 전하실 곳</div>
-            <span class="name">Account</span>
-                            <div class="sectionDesc">While your presence on our special day is truly all we could ask for,<br/>if you would like to contribute to our new beginning, we will have a wishing well at our reception.<br/>Alternatively, you may use our bank details below.<br/><br/></div>
-                    </div>
+<div class="lai_1">
+<div class="sectionHead anibox">
+    <div class="inv">마음 전하실 곳</div>
+    <span class="name">Account</span>
+        <div class="sectionDesc">While your presence on our special day is truly all we could ask for,<br/>if you would like to contribute to our new beginning, we will have a wishing well at our reception.<br/>Alternatively, you may use our bank details below.<br/><br/></div>
+        </div>
     </div>
 
     <div class="lai_2">
@@ -839,29 +740,13 @@ $(document).ready(function(){
             <li class="ft-gowun-bold">
                 062-806 10377402<br/>
                 <span class="name">Alice An</span>
-                <a class="b_1" onclick="copy_to_clipboard2('actnm2')">복사</a><textarea id="actnm2" class="txtnone">062-806 10377402</textarea>
+                <a class="b_1" onclick="copy_to_clipboard2('actnm2')">copy</a><textarea id="actnm2" class="txtnone">062-806 10377402</textarea>
             </li>
             </ul>
             </div>
         </div>
     </div>
-
-    <div class="lai_3">
-            </div>
-
-    <div class="lai_4">
-    </div>
 </div>
-<!-- 방명록 끝  -->
-        <div class="sectionMg layer" style="display: none;" id="weddingVideoSection">
-        <div class="video_wrap basic">
-        <iframe id="wvideo" src="" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </div>
-</div>
-                              
-    <!--<div class="layer clearfix" style="height: 50px;"></div>-->
 
 <div class="endingLayer rippid end-img-parent">
 
@@ -879,11 +764,11 @@ $(document).ready(function(){
         </svg>
     </div>
 
-    <div class="banner01 fixed" style="background-image: url('https://images.theirmood.com/resources/66285/card/NAJU1YvpQU/DlS0wP2H6D.jpg?f=webp&amp;w=1280');">
+    <div class="banner01 fixed" style="background-image: url('img/img/DlS0wP2H6D.jpg');">
          
         <div class="cover" style="overflow: hidden;">
             <div class="vcenterbox">
-                <p>We appreciate your continuous support for us.</p>            </div>
+                <p>We appreciate your continues support for us.</p></div>
         </div>
     </div>
 
@@ -1248,7 +1133,7 @@ $(document).ready(function() {
         window.addEventListener('gestureend', checkZoomLevel);
     </script>
 
-<meta property="og:image" content="img\img\29th of March 2025.jpg">
+<meta property="og:image" content="img\29th of March 2025.jpg">
 <meta property="og:title" content="#TomasFoundHisSoolmate">
 <meta property="og:description" content="Come and celebrate with us">
 <meta property="og:type" content="website">
