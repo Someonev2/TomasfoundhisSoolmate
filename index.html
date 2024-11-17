@@ -112,13 +112,13 @@ function loading(go) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.14/lottie.min.js"></script>
 <div id="all_splash_wrapper">
    
-                    <div class="">
+        <div class="">
             <div class="splash trans" style="display: block;">
                 <div class="ct">
                     <div class="lds-heart"><div></div></div>
-                    <div style="line-height: 20px; color: #fff; margin-top: 10px;">
-                        <div class="typing-txt f20">Celebrate with us!</div>
-                        <div class="typing f20"></div>
+                    <div style="line-height: 40px; color: #fff; margin-top: 5%;">
+                        <div class="typing-txt f40">Celebrate with us!</div></span>
+                        <div class="typing f40"></div>
                     </div>
                 </div><br/>
             </div>
@@ -126,99 +126,6 @@ function loading(go) {
     </div>
 </div>
 
-<div class="pop_acct ft-gowun-bold" id="acctBox" style="display: none;">
-    <div class="vcenterbox">
-        <div class="bx">
-            <div class="grp"></div>
-            <div class="ment"></div>
-            <div class="clearfix">
-                <a class="btn" onclick="copy_to_clipboard('copytext')">Copy</a>
-                <a class="btn close" onclick="closeAcctBox()">Close</a>
-            </div>
-            <textarea id="copytext"></textarea>
-        </div>
-    </div>
-</div>
-
-<div class="popImg">
-       <a class="x_button">
-        <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.86018 16.829L16.3455 8.34375" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-    </a>
-    <div class="in">
-        <div class="container" id="roughMapContainer">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiper-zoom-container">
-                        <img src=""/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-<script src="swiper/swiper-bundle.min.js?t=28"></script>
-<script>
-$(".popImg .x_button").click(function(){
-    $(".pageCover").removeClass("blur6");
-    $(".popImg").removeClass("visible");
-});
-function openMapImg() {
-    $(".pageCover").addClass("blur6");
-    $(".popImg").addClass("visible");
-}
-
-var mySwiper = new Swiper ('#roughMapContainer', {
-    // Optional parameters
-    direction: '',
-    loop: false,
-
-    zoom: {
-        maxRatio: 3,
-        minRatio: 1
-    },
-})
-</script>
-
-<div class="popNoticeImg">
-    <a class="x_button">
-        <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.86018 16.829L16.3455 8.34375" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#cccccc" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-    </a>
-    <div class="in">
-        <div class="container" id="popNoticeImgWrap">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiper-zoom-container">
-                        <img src=""/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    $(".popNoticeImg .x_button").click(function(){
-        $(".pageCover").removeClass("blur6");
-        $(".popNoticeImg").removeClass("visible");
-    });
-
-    var mySwiper = new Swiper ('#popNoticeImgWrap', {
-        // Optional parameters
-        direction: '',
-        loop: false,
-
-        zoom: {
-            maxRatio: 3,
-            minRatio: 1
-        },
-    })
-</script>
 
 <div class="pageCover clearfix sk2">
 
@@ -311,7 +218,7 @@ var mySwiper = new Swiper ('#roughMapContainer', {
 
 <div class="sectionMg gallLayerWrapper layer layer03 clearfix">
 
-<div class="sectionHead anibox"  style="padding: 30px 0px 30px 0px"><div class="inv">엘범</div><span class="name">GALLERY</span></div>
+<div class="sectionHead anibox"  style="padding: 10px 0px 10x 0px, width: max-width;"><div class="inv">엘범</div><span class="name">GALLERY</span></div>
 
     <!--<div class="pic_0_del" style="height: 70px;"></div>-->
     <div class="clearfix anibox">
@@ -500,72 +407,112 @@ function closeModal() {
     
 </div>
 
-    <div class="sectionMg layer layer03 clearfix" id="attendLayerId">
-            <div class="sectionHead anibox">
-            <div class="inv">참석 의사 전달</div>
-            <span class="name">R.S.V.P.</span>
-                        <div class="sectionDesc">Come and celebrate the moment with us!</div><br>
-                        <div class="private-attend" style="text-align: center;">
-            <div>
-            <!-- Form Starts Here -->
-            <form id="rsvpForm" method="POST" action="send_email.php" class="form-container">
-                <div class="form-group">
-                    <label for="name">Name:</label><br>
-                    <div></div>
-                    <input type="text" name="name" id="name" class="input-field" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact">Contact:</label>
-                    <input type="text" name="contact" id="contact" class="input-field" required>
-                </div>
-                <div class="form-group">
-                    <label>Attendance:</label>
-                    <div class="radio-group-inline">
-                        <input type="radio" name="attendance" value="Attending" id="attending" required>
-                        <label for="attending">Attending</label>
-                        <input type="radio" name="attendance" value="Not Attending" id="not_attending" required>
-                        <label for="not_attending">Not Attending</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Would you bring a player 2?:</label>
-                    <div class="radio-group-inline">
-                        <input type="radio" name="plus_one" value="Yes" id="plus_one_yes" required>
-                        <label for="plus_one_yes" onclick="updateDietaryPlaceholder(true)">Yes</label>
-                        <input type="radio" name="plus_one" value="No" id="plus_one_no" required>
-                        <label for="plus_one_no" onclick="updateDietaryPlaceholder(false)">No</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="dietary">Let us know you dietary requirements</label>
-                    <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Tell us" optional>
-                </div>
-                <button type="submit" class="submit-button">Submit RSVP</button>
-            </form>
-            <!-- Form Ends Here -->
-            </div>
+<div class="sectionMg layer layer03 clearfix" id="attendLayerId">
+<div class="sectionHead anibox">
+<div class="inv">참석 의사 전달</div>
+<span class="name">R.S.V.P.</span>
+    <div class="sectionDesc">Come and celebrate the moment with us!</div><br>
+    <div class="private-attend" style="text-align: center;">
+<div>
+<!-- Form Starts Here -->
+<form id="rsvpForm" method="POST" action="send_email.php" class="form-container">
+    <div class="form-group">
+        <label for="name">Name:</label><br>
+        <div></div>
+        <input type="text" name="name" id="name" class="input-field" required>
+    </div>
+    <div class="form-group">
+        <label for="contact">Email:</label>
+        <input type="text" name="contact" id="contact" class="input-field" required>
+    </div>
+    <div class="form-group">
+        <label>Attendance:</label>
+        <div class="radio-group-inline">
+            <input type="radio" name="attendance" value="Attending" id="attending" required>
+            <label for="attending">Attending</label>
+            <input type="radio" name="attendance" value="Not Attending" id="not_attending" required>
+            <label for="not_attending">Not Attending</label>
         </div>
     </div>
+    <div class="form-group">
+        <label>Will you bring a player 2?:</label>
+        <div class="radio-group-inline">
+            <input type="radio" name="plus_one" value="Yes" id="plus_one_yes" required>
+            <label for="plus_one_yes" onclick="updateDietaryPlaceholder(true)">Yes</label>
+            <input type="radio" name="plus_one" value="No" id="plus_one_no" required>
+            <label for="plus_one_no" onclick="updateDietaryPlaceholder(false)">No</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="dietary">Let us know your dietary requirements</label>
+        <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
+    </div>
+    <button type="submit" class="submit-button">Submit RSVP</button>
+</form>
+<!-- Form Ends Here -->
+
+<!-- Notifications -->
+<div id="errorMessage" class="notification error" style="display:none;">Oops! RSVP didn't send. Please try again.</div>
+<div id="successMessage" class="notification success" style="display:none;">RSVP has been successfully sent! Thank you!</div>
+</div>
+</div>
+</div>
 </div>
 
 
 <script>
 
-    // Front-end validation (for extra safety)
-    document.getElementById('rsvpForm').addEventListener('submit', function (e) {
-    const name = document.getElementById('name').value.trim();
-    const contact = document.getElementById('contact').value.trim();
-    const attendance = document.querySelector('input[name="attendance"]:checked');
-    const knows = document.querySelector('input[name="knows"]:checked');
-    const errorMessage = document.getElementById('errorMessage');
+document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+    e.preventDefault();  // Prevent default form submission
 
-    if (!name || !contact || !attendance || !knows) {
-        e.preventDefault(); // Prevent form submission
-            errorMessage.style.display = 'block'; // Show error message
+    // Collect form data
+    const formData = new FormData(this);
+    
+    // Display loading state (optional)
+    const submitButton = document.querySelector('.submit-button');
+    submitButton.innerHTML = 'Submitting...';
+    
+    // Send the form data via AJAX
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json()) // Expect JSON response
+    .then(data => {
+        // Handle response from PHP
+        if (data.success) {
+            showNotification('successMessage');
         } else {
-            errorMessage.style.display = 'none'; // Hide error message
+            showNotification('errorMessage');
         }
+        
+        // Reset form and button
+        submitButton.innerHTML = 'Submit RSVP';
+    })
+    .catch(error => {
+        showNotification('errorMessage');
+        submitButton.innerHTML = 'Submit RSVP'; // Reset button text
     });
+});
+
+// Function to show notifications and handle fade-out
+function showNotification(notificationId) {
+    const notification = document.getElementById(notificationId);
+    
+    // Display the notification
+    notification.style.display = 'block';
+
+    // Automatically fade out after 3 seconds
+    setTimeout(function() {
+        notification.classList.add('fade-out'); // Add fade-out class
+        // Hide notification after fade-out transition completes
+        setTimeout(function() {
+            notification.style.display = 'none';
+            notification.classList.remove('fade-out'); // Reset fade-out class
+        }, 1000); // Wait 1 second for the fade-out effect to complete
+    }, 3000); // Keep message visible for 3 seconds
+}
+
 
     $(document).ready(function() {
         $('.anibox_attend').addClass("hd").viewportChecker({
@@ -585,97 +532,7 @@ function closeModal() {
     }
 }
 
-    // 작성 팝업 열기
-    $("#att_op_id").click(function(){
-        att_write_sctop = $(window).scrollTop();
-
-        $("#att_op").css("display", "block");
-        $("html,body").css("height", "100%"); $("html,body").css("overflow-y", "hidden");
-    });
-    // 팝업 닫기
-    $("#att_op .clse").click(function(){
-
-        $("html,body").css("height", "auto"); $("html,body").css("overflow-y", "visible");
-        $("html, body").animate({scrollTop: att_write_sctop},10);
-
-        $(this).parents(".wpopclass").css("display", "none");
-
-    });
-
-
-    $(".att-fdver select[name=cnt]").change(function(){
-        if($(this).val()!="1") {
-            $(".companion-fd").css("display", "block");
-        }else{
-            $(".companion-fd").css("display", "none");
-        }
-    });
-
-    $("input[name=attendFlag]").change(function(){
-        if($("input[name=attendFlag]:checked").val()=="true") {
-            $(".attendflag-fd").css("display", "block");
-        }else{
-            $(".attendflag-fd").css("display", "none");
-        }
-    });
-
-
-    // 참석의사 전달하기
-    $("#att_op .att-fdver-btn").click(function(){
-
-        
-        var data = $("#att_op form").serializeObject();
-        if(!check.isNotNull(data.name)) {alert("참석자 성함을 입력해주세요.");return;}
-        data.name = data.name.trim();
-        if(data.name.length<2) {
-            alert("이름은 2글자 이상 입력해주세요."); return;
-        }
-        var sb = $("#att_op .opt_sb.sel").attr("data-val");
-        
-        console.log(data);
-        if(data.attendFlag=="false") {
-            data.eatFlag = "";
-            data.vaccineFlag = "";
-        }
-
-        if(!$("#pagree").is(":checked")) {
-            alert("개인정보 수집 및 이용에 동의해주세요.");
-            return;
-        }
-        // return;
-
-        loading(true);
-
-        $.ajax({
-            type : 'post',
-            //dataType : "text",
-            //contentType : "application/json; charset=utf-8",
-            data : {
-                "attendFlag" : data.attendFlag,
-                "companion" : data.companion,
-                "name" : data.name,
-                "genderFlag" : data.genderFlag,
-                "cnt" : data.cnt,
-                "tel" : data.tel,
-                "eatFlag" : data.eatFlag,
-                "vaccineFlag" : data.vaccineFlag,
-                "msg" : data.msg,
-                "busFlag" : data.busFlag
-            },
-            url : '/card-attend/NAJU1YvpQU',
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            success : function(data){
-                loading(false);
-                alert("참석의사를 전달 완료 했습니다.");
-                location.href = "/card/NAJU1YvpQU";
-            },
-            error : function(err) {
-                loading(true);
-                alert("등록 중에 문제가 발생했습니다.\r\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
-            }
-        });
-    });
-</script>
+   </script>
 
 
 <script>
@@ -720,14 +577,13 @@ $(document).ready(function(){
 });
 </script>
 
-
 <div class="sectionMg layer layer02 clearfix acctSection" id="layer_acc_id">
 
 <div class="lai_1">
 <div class="sectionHead anibox">
     <div class="inv">마음 전하실 곳</div>
-    <span class="name">Account</span>
-        <div class="sectionDesc">While your presence on our special day is truly all we could ask for,<br/>if you would like to contribute to our new beginning, we will have a wishing well at our reception.<br/>Alternatively, you may use our bank details below.<br/><br/></div>
+    <span class="name">Wishing Well</span>
+        <div class="sectionDesc">While your presence on our special day is truly all we could ask for, if you would like to contribute to our new beginning,<br/> we will have a wishing well at our reception.<br/>Alternatively, you may use our bank details below.<br/><br/></div>
         </div>
     </div>
 
@@ -735,7 +591,7 @@ $(document).ready(function(){
     <div id="tel_ul_3" class="accst02 anibox">
 
     <div class="pack_wrap clearfix">
-        <a class="pack pack_woman">CBA<i class="fa fa-chevron-down"></i></a>
+        <a class="pack pack_woman">Bank Account</a>
             <ul class="c accordion2">
             <li class="ft-gowun-bold">
                 062-806 10377402<br/>
@@ -763,13 +619,10 @@ $(document).ready(function(){
             </g>
         </svg>
     </div>
-
-    <div class="banner01 fixed" style="background-image: url('img/img/DlS0wP2H6D.jpg');">
-         
-        <div class="cover" style="overflow: hidden;">
-            <div class="vcenterbox">
-                <p>We appreciate your continues support for us.</p></div>
-        </div>
+<section>
+    <div class="banner01" style="background-image: url('img/img/DlS0wP2H6D.jpg');">
+           <div class="banner01" style="flex-shrink">
+             </div>
     </div>
 
     <div class="wave bottom">
@@ -785,24 +638,16 @@ $(document).ready(function(){
     </div>
 
 </div>
-
-  
 </div>
-
-
-
-
 
 <script src="moment/moment.js"></script><!-- moment -->
 <script src="moment/moment-with-locales.js"></script><!-- moment locale -->
 <script src="swiper/swiper-bundle.min.js?t=28"></script><!-- swiper -->
 <script src="Fontisawesome/ontawesome.min.js" loading="lazy"></script><!-- fontawesome -->
-
-<script type="text/javascript" defer src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=z1i1zjproo&submodules=geocoder"></script><!-- Naver Map -->
 <script style="text/javascript" src="wdd/card.show.js?time=28"></script>
 <script style="text/javascript" src="wdd/card.show.opening.js?time=28"></script>
 
-
+</section>
  
 <script>
 function snowfallevt() {
@@ -1080,11 +925,7 @@ $(document).ready(function() {
 });
 
 </script>
-
-
     <script>
-        
-
         let lastTouchEnd = 0;
 
         function blurImages() {
@@ -1133,7 +974,7 @@ $(document).ready(function() {
         window.addEventListener('gestureend', checkZoomLevel);
     </script>
 
-<meta property="og:image" content="img\img\29th of March 2025.jpg"">
+<meta property="og:image" content="img\29th of March 2025.jpg">
 <meta property="og:title" content="#TomasFoundHisSoolmate">
 <meta property="og:description" content="Come and celebrate with us">
 <meta property="og:type" content="website">
