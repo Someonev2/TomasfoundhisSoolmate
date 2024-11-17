@@ -1,27 +1,43 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $contact = htmlspecialchars($_POST['contact']);
-    $attendance = htmlspecialchars($_POST['attendance']);
-    $plus_one = htmlspecialchars($_POST['plus_one']);
-    $dietary = htmlspecialchars($_POST['dietary']);
+header('Content-Type: application/json'); // Set JSON header
 
-    $to = "alice.an822@gmail.com"; // Replace with your email
-    $subject = "RSVP Submission";
-    $message = "Name: $name\n";
-    $message .= "Attendance: $attendance\n";
-    $message .= "Contact: $contact\n";
-    $message .= "Plus 1? $plus_one\n";
-    if (!empty($dietary)) {
-        $message .= "Dietary Suggestions: $dietary\n";
-    }
+try {
+        $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $attendance = filter_var($_POST['attendance'], FILTER_SANITIZE_STRING);
+        $plusOne = filter_var($_POST['plus_one'], FILTER_SANITIZE_STRING);
+        $dietary = filter_var($_POST['dietary'], FILTER_SANITIZE_STRING);
 
-    $headers = "From: noreply@example.com";
+        // Validate email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("Invalid email format");
+        }
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "RSVP submitted successfully!";
+        // Prepare email
+        $to = "alice.an822@gmail.com";
+        $subject = "RSVP from " . $name;
+        $message = "Name: $name\n"
+                . "Email: $email\n"
+                . "Attendance: $attendance\n"
+                . "Plus One: $plusOne\n"
+                . "Dietary: $dietary";
+        $headers = [
+            'From' => 'noreply@example.com',
+            'Reply-To' => $email,
+            'X-Mailer' => 'PHP/' . phpversion()
+        ];
+
+        // Send email
+        if (mail($to, $subject, $message, $headers)) {
+            echo json_encode([
+                "success" => true,
+                "message" => "RSVP submitted successfully"
+            ]);
+        } else {
+            throw new Exception("Failed to send email");
+        }
     } else {
-        echo "Failed to send RSVP.";
+        throw new Exception("Invalid request method");
     }
-}
+
 ?>
