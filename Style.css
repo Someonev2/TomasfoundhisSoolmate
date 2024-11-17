@@ -34,6 +34,10 @@ html {
   font-size: 20px;
 }
 
+#typing-txt {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 30px;
+}
 .caltit_tit{
   font-family: 'Nanum Pen Script', cursive;
   font-size: 30px;
@@ -502,79 +506,6 @@ ul.wayto li.li .n {font-size: 1.5rem; color: #000; letter-spacing: -.03em; margi
     -ms-filter: blur(6px);
     filter: blur(6px);
 }
-.popImg.visible {
-    opacity: 1; visibility: visible;
-}
-
-.popNoticeImg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 500;
-    background: rgba(51,39,42,.6);
-    touch-action: pinch-zoom;
-    visibility: hidden;
-    opacity: 0;
-}
-.popNoticeImg .in {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    height: 100%;
-    max-width: 1280px;
-    transform: translate(-50%,-50%);
-}
-.popNoticeImg .in .container {
-    position: relative;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    touch-action: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.popNoticeImg img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    cursor: move;
-    touch-action: none;
-    vertical-align: top;
-    transform: translateX(0px) translateY(0px) translateZ(0px) scale(1, 1);
-}
-.popNoticeImg .x_button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    font-size: 20px;
-    z-index: 1;
-}
-.popNoticeImg .down_button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #fff;
-    font-size: 20px;
-    z-index: 1;
-}
-.pageCover.blur6 {
-    -webkit-filter: blur(6px);
-    -moz-filter: blur(6px);
-    -o-filter: blur(6px);
-    -ms-filter: blur(6px);
-    filter: blur(6px);
-}
 .popNoticeImg.visible {
     opacity: 1; visibility: visible;
 }
@@ -687,43 +618,6 @@ ul.wayto li.li .n {font-size: 1.5rem; color: #000; letter-spacing: -.03em; margi
 .en_pop {
     line-height: 1 !important;
     width: 70%;
-}
-
-ul.books li .video .vbg {
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.25);
-    position: relative;
-    border-radius: 5px;
-}
-ul.books li .video .fa-play {
-    background: #222;
-    color: #fafafa;
-    display: inline-block;
-    padding: 10px 9px 10px 11px;
-    border-radius: 50%;
-    font-size: 10px;
-
-    width: 30px; height: 30px; box-sizing: border-box;
-
-    position: absolute;
-    top: 0; bottom: 0; right: 0; left: 0;
-    margin: auto;
-}
-ul.books li .b.video {
-    padding: 0 !important;
-    border-radius: 5px;
-}
-ul.books li .b.video .bottom {
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 15px;
-}
-ul.books li .b.video .bottom > span {
-    background: rgba(0,0,0,0.5); color: #ccc;
 }
 
 .books-open-list {
@@ -943,8 +837,9 @@ ul.books li .b.video .bottom > span {
 .item {
   background-size: cover;
   background-position: center;
-  width: 124px; /* Example width */
-  height: 150px; /* Example height */
+  width: 100%; /* Example width */
+  height: 100%; /* Example height */
+  object-fit: cover;
 }
 
 .item1 {
@@ -1064,13 +959,16 @@ ul.books li .b.video .bottom > span {
 
 /* General form styling */
 .form-container {
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: left;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
 }
 
 .form-group {
   margin-bottom: 20px;
+
 }
 
 .form-group > label {
@@ -1100,4 +998,40 @@ ul.books li .b.video .bottom > span {
 
 .submit-button:hover {
   background-color: #fc9a93;
+}
+
+.notification {
+  display: none; /* Initially hidden */
+  padding: 15px;
+  margin-top: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 1s ease-out; /* Smooth fade-out effect */
+}
+
+/* Success message (peach color) */
+.notification.success {
+  background-color: #FFDAB9; /* Peach color */
+  color: #333;
+}
+
+/* Error message */
+.notification.error {
+  background-color: #FFCCCB; /* Light red (peachy red) */
+  color: #333;
+}
+
+.notification.fade-out {
+  opacity: 0; /* Fade out effect */
+}
+
+.banner01 {
+  background-size: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  resize: both;
 }
