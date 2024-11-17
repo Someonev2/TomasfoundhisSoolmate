@@ -59,6 +59,24 @@ html {
   font-family: 'Sour Gummy', cursive;
 }
 
+#intro-ment-area {
+  font-family: 'Gaegu', sans-serif;
+  font-size: 18px; /* Adjust as needed */
+  line-height: 1.6; /* Ensures readability */
+  color: #333; /* A soft dark color */
+  text-align: center; /* Optional: Centers text */
+  margin: 20px; /* Optional: Adds spacing */
+}
+
+.sectionDesc {
+  font-family: 'Gaegu', sans-serif;
+  font-size: 18px; /* Adjust as needed */
+  line-height: 1.6; /* Ensures readability */
+  color: #333; /* A soft dark color */
+  text-align: center; /* Optional: Centers text */
+  margin: 20px; /* Optional: Adds spacing */
+}
+
 .private-books .fw  {
     display: none !important;
 }
