@@ -1,22 +1,29 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assume form data is coming in, you can add validation here
-    $name = $_POST['name'];
-    $Email = $_POST['email'];
-    $attendance = $_POST['attendance'];
-    $plusOne = $_POST['plus_one'];
-    $dietary = $_POST['dietary'];
+   
+    $_POST="http://guestlist2025-b291.restdb.io/mail"
+    $name = htmlspecialchars($_POST['name']);
+    $contact = htmlspecialchars($_POST['contact']);
+    $attendance = htmlspecialchars($_POST['attendance']);
+    $plus_one = htmlspecialchars($_POST['plus_one']);
+    $dietary = htmlspecialchars($_POST['dietary']);
 
-    // Example: Send the email (adjust with your email logic)
-    $to = "alice.an822@gmail.com";
-    $subject = "RSVP from $name";
-    $message = "Name: $name\nEmail: $Email\nAttendance: $attendance\nPlus One: $plusOne\nDietary: $dietary";
+    $to = "alice.an822@gmail.com"; // Replace with your email
+    $subject = "RSVP Submission";
+    $message = "Name: $name\n";
+    $message .= "Attendance: $attendance\n";
+    $message .= "Contact: $contact\n";
+    $message .= "Plus 1? $plus_one\n";
+    if (!empty($dietary)) {
+        $message .= "Dietary Suggestions: $dietary\n";
+    }
+
     $headers = "From: noreply@example.com";
 
     if (mail($to, $subject, $message, $headers)) {
-        echo json_encode(["success" => true]); // Success response
+        echo "RSVP submitted successfully!";
     } else {
-        echo json_encode(["success" => false]); // Error response
+        echo "Failed to send RSVP.";
     }
 }
 ?>
