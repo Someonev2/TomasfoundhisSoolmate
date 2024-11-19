@@ -415,15 +415,15 @@ function closeModal() {
     <div class="private-attend" style="text-align: center;">
 <div>
 <!-- Form Starts Here -->
-<form id="rsvpForm" method="POST" class="form-container">
+<form id="rsvpForm" class="form-container">
     <div class="form-group">
         <label for="name">Name:</label><br>
         <div></div>
-        <input type="text" name="name" id="name" class="name2" required>
+        <input type="text" name="name" class="name2" required>
     </div>
     <div class="form-group">
         <label for="contact">Email:</label>
-        <input type="text" name="contact" id="contact" class="contact" required>
+        <input type="email" name="contact" class="contact" required>
     </div>
     <div class="form-group">
         <label>Attendance:</label>
@@ -447,7 +447,7 @@ function closeModal() {
         <label for="dietary">Let us know your dietary requirements</label>
         <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
     </div>
-    <button type="submit" onclick="sendMail()" name="sendMailBtn" class="submit-button">Submit RSVP</button>
+    <button type="submit" name="sendMailBtn" class="submit-button">Submit RSVP</button>
 </form>
 <!-- Form Ends Here -->
 
