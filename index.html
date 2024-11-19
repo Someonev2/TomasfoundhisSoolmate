@@ -459,6 +459,32 @@ function closeModal() {
     </div>
 </div>
 
+<script>
+    function sendMail(){
+        (function(){
+            emailjs.init("y5BCXyCS9i2AChyY_");
+        })();
+
+
+        var params = {
+            sendername: document.querySelector("#Sendername").value,
+            to: document.querySelector("#to").value,
+            subject: document.querySelector("#subject").value,
+            replyto: document.querySelector("#replyto").value,
+            message: document.querySelector("#message").value,
+    };
+        var serviceID="service_cb4fygn";
+        var templateID="template_v5r98ad";
+
+        emailjs.send(serviceID, templateID, params);
+        .then( res => {
+            alert("Email sent successfully")
+            
+        
+</scrpit>
+            
+
+    
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -929,7 +955,8 @@ $(document).ready(function() {
 });
 
 </script>
-    <script>
+   
+<script>
         let lastTouchEnd = 0;
 
         function blurImages() {
