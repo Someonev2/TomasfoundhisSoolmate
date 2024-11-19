@@ -447,7 +447,7 @@ function closeModal() {
         <label for="dietary">Let us know your dietary requirements</label>
         <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
     </div>
-    <button type="submit" class="submit-button">Submit RSVP</button>
+    <button type="submit" onclick="sendMail()" name="sendMailBtn" class="submit-button">Submit RSVP</button>
 </form>
 <!-- Form Ends Here -->
 
@@ -458,6 +458,18 @@ function closeModal() {
 </div>
 </div>
 </div>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "y5BCXyCS9i2AChyY_",
+      });
+   })();
+</script>
+<script src="mail.js"></script>
 
 
 <script>
