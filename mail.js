@@ -13,7 +13,7 @@ const publickey = 'y5BCXyCS9i2AChyY_';
 
 emailjs.init(publickey);
 
-form.addEventListener('submit', (e)=> {
+form.addEventListener('Submit RSVP', (e)=> {
     e.preventDefault();
     const inputData = {
         from_name:nameInput.value,
@@ -39,3 +39,5 @@ form.addEventListener('submit', (e)=> {
     }
 );
 });
+
+
