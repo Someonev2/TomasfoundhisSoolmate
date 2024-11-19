@@ -517,12 +517,6 @@ function closeModal() {
             iframeForm.submit();
             return false;
         }
-
-        // Additional prevention of form submission
-        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            return false;
-        });
     </script>
 <!-- Form Starts Here 
 <form id="rsvpForm" class="form-container">
