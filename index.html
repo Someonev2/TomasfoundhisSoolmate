@@ -419,27 +419,27 @@ function closeModal() {
     <div class="form-group">
         <label for="name">Name:</label><br>
         <div></div>
-        <input type="text" name="name" id="name" class="input-field" required>
+        <input type="text" name="name" id="name" class="name" required>
     </div>
     <div class="form-group">
         <label for="contact">Email:</label>
-        <input type="text" name="contact" id="contact" class="input-field" required>
+        <input type="text" name="contact" id="contact" class="contact" required>
     </div>
     <div class="form-group">
         <label>Attendance:</label>
         <div class="radio-group-inline">
-            <input type="radio" name="attendance" value="Attending" id="attending" required>
+            <input type="radio" name="attendance" value="Attending" id="attending" class="attending1" required>
             <label for="attending">Attending</label>
-            <input type="radio" name="attendance" value="Not Attending" id="not_attending" required>
+            <input type="radio" name="attendance" value="Not Attending" id="not_attending" class="attending2" required>
             <label for="not_attending">Not Attending</label>
         </div>
     </div>
     <div class="form-group">
         <label>Will you bring a player 2?:</label>
         <div class="radio-group-inline">
-            <input type="radio" name="plus_one" value="Yes" id="plus_one_yes" required>
+            <input type="radio" name="plus_one" value="Yes" id="plus_one_yes" class="plus1" required>
             <label for="plus_one_yes" onclick="updateDietaryPlaceholder(true)">Yes</label>
-            <input type="radio" name="plus_one" value="No" id="plus_one_no" required>
+            <input type="radio" name="plus_one" value="No" id="plus_one_no" class="plus2" required>
             <label for="plus_one_no" onclick="updateDietaryPlaceholder(false)">No</label>
         </div>
     </div>
@@ -461,13 +461,6 @@ function closeModal() {
 
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "y5BCXyCS9i2AChyY_",
-      });
-   })();
 </script>
 <script src="mail.js"></script>
 
