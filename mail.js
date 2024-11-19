@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-const nameInput = document.querySelector('name');
+const nameInput = document.querySelector('name2');
 const contactInput = document.querySelector('contact');
 const attendingInput1 = document.querySelector('attending1');
 const attendingInput2 = document.querySelector('attending2');
