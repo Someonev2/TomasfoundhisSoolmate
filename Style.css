@@ -975,7 +975,15 @@ ul.wayto li.li .n {font-size: 1.5rem; color: #000; letter-spacing: -.03em; margi
   margin-bottom: 20px;
 }
 
-.name .contact {
+.name {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact {
   width: 100%;
   padding: 8px;
   font-size: 14px;
