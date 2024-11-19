@@ -414,7 +414,117 @@ function closeModal() {
     <div class="sectionDesc">Come and celebrate the moment with us!</div><br>
     <div class="private-attend" style="text-align: center;">
 <div>
-<!-- Form Starts Here -->
+
+               <form action="https://docs.google.com/forms/d/e/1FAIpQLScAIC8EK5ftbTi3qGY2NLFvF26dSjtyP7pyynpT-WsnCgU0CQ/viewform?usp=sf_link">
+                    <div class="form-group">
+                        <label> Your Name</label></br>
+                        <input type="text" name="entry.981887234" class="input-field" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>E-mail Address</label>
+                        <input type="text" name="entry.1687956155" class="input-field" required placeholder="Your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Will you be attending?</label>
+                        <div class="radio-group-inline">
+                        <input type="radio" name="entry.975024928" value="Attending" id="attending" required>
+                        <label for="attending" onclick="updateDietaryPlaceholder(true)">Attending</label>
+                        <input type="radio" name="entry.975024928" value="Not Attending" id="not_attending" required>
+                        <label for="not_attending"  onclick="updateDietaryPlaceholder(false)">Not Attending</label>
+                    </div>
+                    <div class="form-group">
+                        <label>Would you bring a player 2?:</label>
+                        <div class="radio-group-inline">
+                            <input type="radio" name="entry.401791938" value="Yes" id="plus_one_yes" required>
+                            <label for="plus_one_yes" onclick="updateDietaryPlaceholder(true)">Yes</label>
+                            <input type="radio" name="entry.401791938" value="No" id="plus_one_no" required>
+                            <label for="plus_one_no" onclick="updateDietaryPlaceholder(false)">No</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dietary">What is your/your partner's dietary requirements?</label>
+                        <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
+                    </div>
+                    <div class="submit button">
+                        <button type="button" onclick="submitForm(event)" class="submit-button">Submit RSVP</button>
+                    </form>
+                    
+                    <div id="successMessage" class="status-message success">
+                        Thank you for your response!
+                    </div>
+                    <div id="errorMessage" class="status-message error">
+                        Error submitting RSVP. Please try again.
+                    </div>
+
+
+                 <script>
+        function submitForm(e) {
+            // Prevent any default behavior
+            e.preventDefault();
+            if(e.stopPropagation) e.stopPropagation();
+            
+            const form = document.getElementById('rsvpForm');
+            const formData = new FormData(form);
+            const submitButton = document.querySelector('.submit-button');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            // Hide messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+
+            // Create iframe for submission
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+
+            // Create a form inside the iframe
+            const iframeDoc = iframe.contentWindow.document;
+            const iframeForm = iframeDoc.createElement('form');
+            iframeForm.action = 'https://docs.google.com/forms/d/e/1FAIpQLScAIC8EK5ftbTi3qGY2NLFvF26dSjtyP7pyynpT-WsnCgU0CQ/formResponse';
+            iframeForm.method = 'POST';
+
+            // Add all form data to the iframe form
+            for (let pair of formData.entries()) {
+                const input = iframeDoc.createElement('input');
+                input.type = 'hidden';
+                input.name = pair[0];
+                input.value = pair[1];
+                iframeForm.appendChild(input);
+            }
+
+            iframeDoc.body.appendChild(iframeForm);
+
+            // Submit form and handle response
+            iframe.onload = function() {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit RSVP';
+                successMessage.style.display = 'block';
+                form.reset();
+                
+                // Remove the iframe after submission
+                setTimeout(function() {
+                    document.body.removeChild(iframe);
+                }, 1000);
+            };
+
+            iframeForm.submit();
+            return false;
+        }
+
+        // Additional prevention of form submission
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    </script>
+<!-- Form Starts Here 
 <form id="rsvpForm" class="form-container">
     <div class="form-group">
         <label for="name">Name:</label><br>
@@ -449,7 +559,7 @@ function closeModal() {
     </div>
     <button type="submit" name="sendMailBtn" class="submit-button">Submit RSVP</button>
 </form>
-<!-- Form Ends Here -->
+<<Form Ends Here>> 
 
 
 
@@ -475,7 +585,8 @@ function closeModal() {
             alert("Email sent successfully")
             
         
-</scrpit>
+</scrpit>-->
+    
             
 <!-- Notifications -->
             <div id="errorMessage" class="notification error" style="display:none;">Oops! RSVP didn't send. Please try again.</div>
