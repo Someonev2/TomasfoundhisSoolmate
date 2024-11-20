@@ -983,7 +983,7 @@ ul.wayto li.li .n {font-size: 1.5rem; color: #000; letter-spacing: -.03em; margi
   border-radius: 4px;
 }
 
-.name2 {
+.nameuser {
   width: 100%;
   padding: 8px;
   font-size: 14px;
@@ -991,7 +991,7 @@ ul.wayto li.li .n {font-size: 1.5rem; color: #000; letter-spacing: -.03em; margi
   border-radius: 4px;
 }
 
-.contact {
+.email {
   width: 100%;
   padding: 8px;
   font-size: 14px;
@@ -1016,38 +1016,28 @@ ul.wayto li.li .n {font-size: 1.5rem; color: #000; letter-spacing: -.03em; margi
   background-color: #fc9a93;
 }
 
-.notification {
-  display: none; /* Initially hidden */
-  padding: 15px;
-  margin-top: 15px;
-  text-align: center;
-  border-radius: 8px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  opacity: 1;
-  transition: opacity 1s ease-out; /* Smooth fade-out effect */
-}
-
-/* Success message (peach color) */
-.notification.success {
-  background-color: #FFDAB9; /* Peach color */
-  color: #333;
-}
-
-/* Error message */
-.notification.error {
-  background-color: #FFCCCB; /* Light red (peachy red) */
-  color: #333;
-}
-
-.notification.fade-out {
-  opacity: 0; /* Fade out effect */
-}
-
 .banner01 {
   background-size: 100%;
   max-width: 100%;
   max-height: 100%;
   resize: both;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.popup.show {
+  display: block;
+  opacity: 1;
 }
