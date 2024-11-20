@@ -414,261 +414,46 @@ function closeModal() {
     <div class="sectionDesc">Come and celebrate the moment with us!</div><br>
     <div class="private-attend" style="text-align: center;">
 <div>
-
-               <form action="https://docs.google.com/forms/d/e/1FAIpQLScAIC8EK5ftbTi3qGY2NLFvF26dSjtyP7pyynpT-WsnCgU0CQ/viewform?usp=sf_link">
-                    <div class="form-group">
-                        <label> Your Name</label></br>
-                        <input type="text" name="entry.981887234" class="input-field" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>E-mail Address</label>
-                        <input type="text" name="entry.1687956155" class="input-field" required placeholder="Your email">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Will you be attending?</label>
-                        <div class="radio-group-inline">
-                        <input type="radio" name="entry.975024928" value="Attending" id="attending" required>
-                        <label for="attending" onclick="updateDietaryPlaceholder(true)">Attending</label>
-                        <input type="radio" name="entry.975024928" value="Not Attending" id="not_attending" required>
-                        <label for="not_attending"  onclick="updateDietaryPlaceholder(false)">Not Attending</label>
-                    </div>
-                    <div class="form-group">
-                        <label>Would you bring a player 2?:</label>
-                        <div class="radio-group-inline">
-                            <input type="radio" name="entry.401791938" value="Yes" id="plus_one_yes" required>
-                            <label for="plus_one_yes" onclick="updateDietaryPlaceholder(true)">Yes</label>
-                            <input type="radio" name="entry.401791938" value="No" id="plus_one_no" required>
-                            <label for="plus_one_no" onclick="updateDietaryPlaceholder(false)">No</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="dietary">What is your/your partner's dietary requirements?</label>
-                        <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
-                    </div>
-                    <div class="submit button">
-                        <button type="button" onclick="submitForm(event)" class="submit-button">Submit RSVP</button>
-                    </form>
-                    
-                    <div id="successMessage" class="status-message success">
-                        Thank you for your response!
-                    </div>
-                    <div id="errorMessage" class="status-message error">
-                        Error submitting RSVP. Please try again.
-                    </div>
-
-
-                 <script>
-        function submitForm(e) {
-            // Prevent any default behavior
-            e.preventDefault();
-            if(e.stopPropagation) e.stopPropagation();
-            
-            const form = document.getElementById('rsvpForm');
-            const formData = new FormData(form);
-            const submitButton = document.querySelector('.submit-button');
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
-
-            // Disable button and show loading state
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
-            
-            // Hide messages
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-
-            // Create iframe for submission
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-
-            // Create a form inside the iframe
-            const iframeDoc = iframe.contentWindow.document;
-            const iframeForm = iframeDoc.createElement('form');
-            iframeForm.action = 'https://docs.google.com/forms/d/e/1FAIpQLScAIC8EK5ftbTi3qGY2NLFvF26dSjtyP7pyynpT-WsnCgU0CQ/formResponse';
-            iframeForm.method = 'POST';
-
-            // Add all form data to the iframe form
-            for (let pair of formData.entries()) {
-                const input = iframeDoc.createElement('input');
-                input.type = 'hidden';
-                input.name = pair[0];
-                input.value = pair[1];
-                iframeForm.appendChild(input);
-            }
-
-            iframeDoc.body.appendChild(iframeForm);
-
-            // Submit form and handle response
-            iframe.onload = function() {
-                submitButton.disabled = false;
-                submitButton.textContent = 'Submit RSVP';
-                successMessage.style.display = 'block';
-                form.reset();
-                
-                // Remove the iframe after submission
-                setTimeout(function() {
-                    document.body.removeChild(iframe);
-                }, 1000);
-            };
-
-            iframeForm.submit();
-            return false;
-        }
-    </script>
-<!-- Form Starts Here 
+<!-- Form Starts Here -->
 <form id="rsvpForm" class="form-container">
     <div class="form-group">
         <label for="name">Name:</label><br>
         <div></div>
-        <input type="text" name="name" class="name2" required>
+        <input type="text" class="nameuser" required>
     </div>
     <div class="form-group">
-        <label for="contact">Email:</label>
-        <input type="email" name="contact" class="contact" required>
+        <label for="email">Email:</label>
+        <input type="email" class="email" required>
     </div>
     <div class="form-group">
         <label>Attendance:</label>
         <div class="radio-group-inline">
-            <input type="radio" name="attendance" value="Attending" id="attending" class="attending1" required>
+            <input type="radio" name="attendance" value="Attending" id="attending" class="attendance" required>
             <label for="attending">Attending</label>
-            <input type="radio" name="attendance" value="Not Attending" id="not_attending" class="attending2" required>
+            <input type="radio" name="attendance" value="Not Attending" id="not_attending" class="attendance" required>
             <label for="not_attending">Not Attending</label>
         </div>
     </div>
     <div class="form-group">
         <label>Will you bring a player 2?:</label>
         <div class="radio-group-inline">
-            <input type="radio" name="plus_one" value="Yes" id="plus_one_yes" class="plus1" required>
-            <label for="plus_one_yes" onclick="updateDietaryPlaceholder(true)">Yes</label>
-            <input type="radio" name="plus_one" value="No" id="plus_one_no" class="plus2" required>
-            <label for="plus_one_no" onclick="updateDietaryPlaceholder(false)">No</label>
+            <input type="radio" name="plus_one" value="Yes" id="plus_one_yes" class="plus_one" required>
+            <label for="plus_one_yes">Yes</label>
+            <input type="radio" name="plus_one" value="No" id="plus_one_no" class="plus_one" required>
+            <label for="plus_one_no">No</label>
         </div>
     </div>
     <div class="form-group">
         <label for="dietary">Let us know your dietary requirements</label>
         <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
     </div>
-    <button type="submit" name="sendMailBtn" class="submit-button">Submit RSVP</button>
+    <button type="submit" class="submit-button">Submit RSVP</button>
 </form>
-<<Form Ends Here>> 
+<!-- Form Ends Here -->
 
-
-
-<script>
-    function sendMail(){
-        (function(){
-            emailjs.init("y5BCXyCS9i2AChyY_");
-        })();
-
-
-        var params = {
-            sendername: document.querySelector("#Sendername").value,
-            to: document.querySelector("#to").value,
-            subject: document.querySelector("#subject").value,
-            replyto: document.querySelector("#replyto").value,
-            message: document.querySelector("#message").value,
-    };
-        var serviceID="service_cb4fygn";
-        var templateID="template_v5r98ad";
-
-        emailjs.send(serviceID, templateID, params);
-        .then( res => {
-            alert("Email sent successfully")
-            
-        
-</scrpit>-->
-    
-            
-<!-- Notifications -->
-            <div id="errorMessage" class="notification error" style="display:none;">Oops! RSVP didn't send. Please try again.</div>
-            <div id="successMessage" class="notification success" style="display:none;">RSVP has been successfully sent! Thank you!</div>
-            </div>
-        </div>
-    </div>
-</div>
-    
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script src="mail.js"></script>
-
-<script>
-
-document.getElementById('rsvpForm').addEventListener('submit', function (e) {
-    e.preventDefault();  // Prevent default form submission
-
-    // Collect form data
-    const formData = new FormData(this);
-    
-    // Display loading state (optional)
-    const submitButton = document.querySelector('.submit-button');
-    submitButton.innerHTML = 'Submitting...';
-    
-    // Send the form data via AJAX
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json()) // Expect JSON response
-    .then(data => {
-        // Handle response from PHP
-        if (data.success) {
-            showNotification('successMessage');
-        } else {
-            showNotification('errorMessage');
-        }
-        
-        // Reset form and button
-        submitButton.innerHTML = 'Submit RSVP';
-    })
-    .catch(error => {
-        showNotification('errorMessage');
-        submitButton.innerHTML = 'Submit RSVP'; // Reset button text
-    });
-});
-
-// Function to show notifications and handle fade-out
-function showNotification(notificationId) {
-    const notification = document.getElementById(notificationId);
-    
-    // Display the notification
-    notification.style.display = 'block';
-
-    // Automatically fade out after 3 seconds
-    setTimeout(function() {
-        notification.classList.add('fade-out'); // Add fade-out class
-        // Hide notification after fade-out transition completes
-        setTimeout(function() {
-            notification.style.display = 'none';
-            notification.classList.remove('fade-out'); // Reset fade-out class
-        }, 1000); // Wait 1 second for the fade-out effect to complete
-    }, 3000); // Keep message visible for 3 seconds
-}
-
-
-    $(document).ready(function() {
-        $('.anibox_attend').addClass("hd").viewportChecker({
-            classToAdd: 'visible animated faster fadeInUp',
-            offset: 100
-        });
-    });
-
-    var att_write_sctop = 0;
-
-    function updateDietaryPlaceholder(hasPlusOne) {
-    const dietaryInput = document.getElementById("dietary");
-    if (hasPlusOne) {
-        dietaryInput.placeholder = "tell us your dietary requirements and/or your plus one";
-    } else {
-        dietaryInput.placeholder = "tell us your dietary requirements";
-    }
-}
-
-   </script>
-
 
 <script>
 
@@ -729,9 +514,11 @@ $(document).ready(function(){
         <a class="pack pack_woman">Bank Account</a>
             <ul class="c accordion2">
             <li class="ft-gowun-bold">
-                062-806 10377402<br/>
+                062-806<br/> <a class="b_1" onclick="copy_to_clipboard2('actnm1')">copy</a><textarea id="actnm1" class="txtnone">062-806</textarea>
+            <li class="ft-gowun-bold">
+                10377402<br/>
                 <span class="name">Alice An</span>
-                <a class="b_1" onclick="copy_to_clipboard2('actnm2')">copy</a><textarea id="actnm2" class="txtnone">062-806 10377402</textarea>
+                <a class="b_1" onclick="copy_to_clipboard2('actnm2')">copy</a><textarea id="actnm2" class="txtnone">10377402</textarea>
             </li>
             </ul>
             </div>
@@ -1060,8 +847,7 @@ $(document).ready(function() {
 });
 
 </script>
-   
-<script>
+    <script>
         let lastTouchEnd = 0;
 
         function blurImages() {
@@ -1114,5 +900,6 @@ $(document).ready(function() {
 <meta property="og:title" content="#TomasFoundHisSoolmate">
 <meta property="og:description" content="Come and celebrate with us">
 <meta property="og:type" content="website">
+<script src="mail.js"></script>
 </body>
 </html>
