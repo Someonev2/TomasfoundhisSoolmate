@@ -11,7 +11,7 @@ const publickey = 'y5BCXyCS9i2AChyY_';
 
 emailjs.init(publickey);
 
-form.addEventListener('Submit RSVP', (e)=> {
+form.addEventListener('submit', (e)=> {
     e.preventDefault();
     const inputData = {
         from_name:nameInput.value,
