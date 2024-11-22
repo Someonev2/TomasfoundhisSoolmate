@@ -6,6 +6,17 @@
     <meta property="og:description" content=" "/>
     <meta name="twitter:description" content=" "/>
     <meta property="og:title" content="We are getting married!"/>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+    emailjs.init({
+      publicKey: 'y5BCXyCS9i2AChyY_',
+    });
+    })();
+    </script>
 
 
     <title>We are getting married!</title>
@@ -419,41 +430,37 @@ function closeModal() {
     <div class="form-group">
         <label for="name">Name:</label><br>
         <div></div>
-        <input type="text" class="nameuser" required>
+        <input id="name" ClassName="form-control" type="text" class="nameuser" name="name" required>
     </div>
     <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" class="email" required>
+        <input id="email" ClassName="form-control" type="email" class="email" name="email" required>
     </div>
     <div class="form-group">
         <label>Attendance:</label>
         <div class="radio-group-inline">
-            <input type="radio" name="attendance" value="Attending" id="attending" class="attendance" required>
+            <input type="radio" name="attendance" id="attending" value="Attending" required>
             <label for="attending">Attending</label>
-            <input type="radio" name="attendance" value="Not Attending" id="not_attending" class="attendance" required>
+            <input type="radio" name="attendance" id="not_attending" value="Not Attending" required>
             <label for="not_attending">Not Attending</label>
         </div>
     </div>
     <div class="form-group">
         <label>Will you bring a player 2?:</label>
         <div class="radio-group-inline">
-            <input type="radio" name="plus_one" value="Yes" id="plus_one_yes" class="plus_one" required>
+            <input type="radio" name="plus_one" id="plus_one_yes" value="Yes" required>
             <label for="plus_one_yes">Yes</label>
-            <input type="radio" name="plus_one" value="No" id="plus_one_no" class="plus_one" required>
+            <input type="radio" name="plus_one" id="plus_one_no" value="No" required>
             <label for="plus_one_no">No</label>
         </div>
     </div>
     <div class="form-group">
         <label for="dietary">Let us know your dietary requirements</label>
-        <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
+        <input type="text" name="dietary" ClassName="form-control" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
     </div>
-    <button type="submit" class="submit-button" id="submitButton">Submit RSVP</button>
+    <input type="submit" class="submit-button" id="submitButton">
 </form>
 <!-- Form Ends Here -->
-
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
 
 <script>
 
@@ -511,13 +518,12 @@ $(document).ready(function(){
     <div id="tel_ul_3" class="accst02 anibox">
 
     <div class="pack_wrap clearfix">
-        <a class="pack pack_woman">Bank Account</a>
+        <a class="pack pack_woman">Bank Account (Alice An)</a>
             <ul class="c accordion2">
             <li class="ft-gowun-bold">
                 062-806<br/> <a class="b_1" onclick="copy_to_clipboard2('actnm1')">copy</a><textarea id="actnm1" class="txtnone">062-806</textarea>
             <li class="ft-gowun-bold">
-                10377402<br/>
-                <span class="name">Alice An</span>
+                10377402
                 <a class="b_1" onclick="copy_to_clipboard2('actnm2')">copy</a><textarea id="actnm2" class="txtnone">10377402</textarea>
             </li>
             </ul>
@@ -543,7 +549,7 @@ $(document).ready(function(){
     </div>
 <section>
     <div class="banner01" style="background-image: url('img/img/DlS0wP2H6D.jpg');">
-           <div class="banner01" style="flex-shrink;">
+           <div class="banner01">
              </div>
     </div>
 
@@ -566,8 +572,9 @@ $(document).ready(function(){
 <script src="moment/moment-with-locales.js"></script><!-- moment locale -->
 <script src="swiper/swiper-bundle.min.js?t=28"></script><!-- swiper -->
 <script src="Fontisawesome/ontawesome.min.js" loading="lazy"></script><!-- fontawesome -->
-<script style="text/javascript" src="wdd/card.show.js?time=28"></script>
-<script style="text/javascript" src="wdd/card.show.opening.js?time=28"></script>
+<script src="mail.js"></script>
+<script src="wdd/card.show.js?time=28"></script>
+<script src="wdd/card.show.opening.js?time=28"></script>
 
 </section>
  
@@ -900,6 +907,5 @@ $(document).ready(function() {
 <meta property="og:title" content="#TomasFoundHisSoolmate">
 <meta property="og:description" content="Come and celebrate with us">
 <meta property="og:type" content="website">
-<script src="mail.js"></script>
 </body>
 </html>
