@@ -406,22 +406,21 @@ function closeModal() {
     <div class="private-attend" style="text-align: center;">
 <div>
 <!-- Form Starts Here -->
-<form id="rsvpForm" class="form-container">
+<form action="https://api.web3forms.com/submit" method="POST" class="form-container">
+    <input type="hidden" name="access_key" value="dccb4e5c-d8ca-4be1-9c42-fbccf36bb0e0">
     <div class="form-group">
         <label for="name">Name:</label><br>
         <div></div>
-        <input id="name" ClassName="form-control" type="text" class="nameuser" name="name" required>
-    </div>
+        <input id="name" type="text" class="input-field" name="name" required></div>
     <div class="form-group">
         <label for="email">Email:</label>
-        <input id="email" ClassName="form-control" type="email" class="email" name="email" required>
-    </div>
+        <input id="email" type="email" class="input-field" name="email" required></div>
     <div class="form-group">
         <label>Attendance:</label>
         <div class="radio-group-inline">
-            <input type="radio" name="attendance" id="attending" value="Attending" required>
+            <input type="radio" name="attending" id="attending" value="Attending" required>
             <label for="attending">Attending</label>
-            <input type="radio" name="attendance" id="not_attending" value="Not Attending" required>
+            <input type="radio" name="attending" id="not_attending" value="Not Attending" required>
             <label for="not_attending">Not Attending</label>
         </div>
     </div>
@@ -436,9 +435,8 @@ function closeModal() {
     </div>
     <div class="form-group">
         <label for="dietary">Let us know your dietary requirements</label>
-        <input type="text" name="dietary" ClassName="form-control" id="dietary" class="input-field" placeholder="Any suggestions?" optional>
-    </div>
-    <input type="submit" class="submit-button" id="submitButton">
+        <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?"></div>
+    <button type="submit" class="submit-button">Send</button>
 </form>
 <!-- Form Ends Here -->
 
