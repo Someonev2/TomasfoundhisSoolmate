@@ -2,18 +2,25 @@
 <html class="basic">
 <head>
     <link rel="icon" type="image/x-icon" href="img/img/TS-removebg-preview.png" />
-    <!--<meta name="description" content=" "/>-->
-    <!--<meta property="og:description" content=" "/>-->
+    <meta name="description" content=" "/>
+    <meta property="og:description" content=" "/>
     <meta name="twitter:description" content=" "/>
     <meta property="og:title" content="We are getting married!"/>
-    <meta property="og:image:secure_url" content="https://someonev2.github.io/TomasfoundhisSoolmate/" />
-    <meta property="og:image:type" content="img/img/29th of March 2025.jpg" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content="yippie" />
-    
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+    emailjs.init({
+      publicKey: 'y5BCXyCS9i2AChyY_',
+    });
+    })();
+    </script>
+
+
     <title>We are getting married!</title>
-    
+
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
     <meta name="csrf-token" content="Ag4hwNTKczxRERGBNIsPoO7SUBaxHQ9JRLNewByn">
@@ -208,16 +215,18 @@ function loading(go) {
         </div>
     
     <div style="padding-bottom: 30px;">
-
+    <!--
+        --------------------------------------------------------------------------------------
+    -->
+    <!-- 인사말 하단 배상 -->
+        <!-- 인사말 하단 배상 끝 -->
+    <!--
+        --------------------------------------------------------------------------------------
+    -->
     </div>
 
 </div>
 
-
-    
-
-
-    
 <div class="sectionMg gallLayerWrapper layer layer03 clearfix">
 
 <div class="sectionHead anibox"  style="padding: 10px 0px 10x 0px"><div class="inv">엘범</div><span class="name">GALLERY</span></div>
@@ -291,29 +300,28 @@ function closeModal() {
 
 </script>
 
+    <!--<div class="pic_0_del clearfix" style="height: 70px;"></div>-->
+
+<!---------------------------------------------
+::::: 줌 기능 활성화 :::::::::::::::::::::::::::
+---------------------------------------------->
 
 </div>
-
 <div class="calanderSection sectionMg layer anibox clearfix ">
-    
-    <div class="sectionHead anibox"  style="padding: 10px 0px 10x 0px">
-        <span class="name" style="inv">
-        Save the Date</span>
-        </div>
-            
-    <div class="calwrap">
-   <div class="f20 caltit" style=" text-align: center;">
-           
-       
-            <div class="caltit_tit">
-                29.03.2025</br>
 
-                
-            Time: TBA </br>
-            Location: TBA in 2 months</br>
-                
+        <div class="calwrap">
+        <div class="f20 caltit" style=" text-align: center;">
+
+            <div class="caltit_tit">
+                2025.03.29
             </div>
-          
+            <!--<div class="caltit_add">
+                토요일
+                                                            오후
+                                        4시
+
+                    
+                            </div>-->
         </div>
 
         <div class="calander_warpper">
@@ -373,7 +381,20 @@ function closeModal() {
 
     <script>
     function getClock() {
+        /*
+        //const clock = document.querySelector("#clock");
+        const nowDate = new Date();//new Date('2024-11-12 21:30:40');
 
+        const nowYear = nowDate.getFullYear();
+        const dDate = new Date('2025-03-29 16:00:00');
+
+        const dDay = dDate.getTime() - nowDate.getTime();
+        const day = Math.floor(dDay / (1000 * 60 * 60 * 24));
+        const hours = String(Math.floor((dDay % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
+        const minutes = String(Math.floor((dDay % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
+        const seconds = String(Math.floor((dDay % (1000 * 60)) / 1000)).padStart(2, "0");
+        //clock.innerText = `${day}d ${hours}h ${minutes}m ${seconds}s`;
+        */
         const now = moment()
         const wday = moment('2025-03-29 16:00:00')
 
@@ -397,15 +418,32 @@ function closeModal() {
     
 </div>
 
+<div class="lai_1">
+    <div class="welcomep">
+        <span class="name">Ceremony starts at 4pm</span>
+            <div class="sectionDesc">Children are welcome</div>
+        </div>
+        <div class="welcomep">
+        <span class="name">Reception starts at 5:30pm</span>
+        <div class="sectionDesc">Strictly No Children!</div>
+    </div>
+</div>
 
 <div class="sectionMg layer layer03 clearfix" id="attendLayerId">
 <div class="sectionHead anibox">
-<div class="inv">The Ceremony + Reception</div>
+<div class="inv">참석 의사 전달</div>
 <span class="name">R.S.V.P.</span>
     <div class="sectionDesc">Come and celebrate the moment with us!</div><br>
     <div class="private-attend" style="text-align: center;">
 <div>
 <!-- Form Starts Here -->
+<!-- <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "48255885",
+    formId: "b2c6b2ed-28c3-462c-a1cf-3ac25eba2901"
+  });
+</script> -->
 <form action="https://api.web3forms.com/submit" method="POST" class="form-container">
     <input type="hidden" name="access_key" value="dccb4e5c-d8ca-4be1-9c42-fbccf36bb0e0">
     <div class="form-group">
@@ -435,10 +473,67 @@ function closeModal() {
     </div>
     <div class="form-group">
         <label for="dietary">Let us know your dietary requirements</label>
-        <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any requirements?"></div>
+        <input type="text" name="dietary" id="dietary" class="input-field" placeholder="Any suggestions?"></div>
     <button type="submit" class="submit-button">Send</button>
 </form>
+
 <!-- Form Ends Here -->
+
+<div class="sectionMg layer layer03 clearfix" id="attendLayerId">
+    <div class="sectionHead anibox">
+    <div class="inv">위치</div>
+    <span class="name">Location</span>
+        <div class="private-attend" style="text-align: center;">
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.944113169511!2d151.7591305756689!3d-32.92607477360178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b73156947f0d391%3A0x1eb11252c1fa6044!2sBar%20Mellow!5e0!3m2!1sen!2sau!4v1736764701758!5m2!1sen!2sau" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+<div class="sectionMg layer layer02 clearfix acctSection" id="layer_acc_id">
+
+<div class="lai_1">
+
+    <div class="sectionHead anibox">
+
+        <div class="inv">일반 Q&A</div>
+        <span class="name">General Q & A</span>
+            <div class="qa">
+                
+                <h3>About Our Venue:</h3>
+                <h3>Q: "Will I need to travel between the ceremony and reception?"</h3>
+                <p>A: Good news! Everything's happening at the same gorgeous venue (unless there's any last-minute surprises! 😉)</p>
+                <div>-</div>
+                <h3>Q: "Inside or outside ceremony?"</h3>
+                <p>A: We'll be celebrating indoors! Just a heads up - seating during the ceremony will be a bit cozy. We're saving seats for those who need them most (like our immediate families and guests who might need extra comfort). Don't worry though - we're working on squeezing in as many chairs as possible! The reception will have plenty of seats for everyone! 💺</p>
+                <div>-</div>
+                <h3>Q: "Help! Where should I park?"</h3>
+                <p>A: Here's a little insider tip - Saturday parking is FREE! 🚗 Your best bet is around Honeysuckle (just a lovely 9-minute stroll away). If you're feeling lucky, you might snag a spot on Hunter Street! </p>
+                <div>-</div>
+                <h3>All About Our Guests:</h3>
+                <h3>Q: "Can I bring the little ones?"</h3>
+                <p>A: We'd love to see your kiddos at the ceremony! But for the reception, we're making it an adults-only party night. 🎉</p>
+                <div>-</div>
+                <h3>Style Guide:</h3>
+                <h3>Q: "What should I wear?"</h3>
+                <p>A: Think cocktail party meets smart casual! Just one tiny request - we'd love if you could skip the wine/maroon coloured outfits as our wonderful bridal party will be rocking those shades! 👗</p>
+                <div>-</div>
+                <h3>Q: "Is there a specific theme I should know about?"</h3>
+                <p>A: We're keeping it simple and letting our beautiful venue (with all its warm, cozy colours) do the talking! ✨</p>
+                <div>-</div>
+                <h3>Food, Drinks & Presents:</h3>
+                <h3>Q: "What's on the menu?"</h3>
+                <p>A: We're going with delicious canapés to keep the party flowing! And who knows? If we're all still peckish, we might throw in some extra treats as the night goes on! 🍽️</p>
+                <div>-</div>
+                <h3>Q: "What about drinks?"</h3>
+                <p>A: Good news - there's an open bar tab! 🥂 Once that runs out, you're welcome to keep the party going by purchasing your own drinks. We want everyone to have a fantastic time while staying safe!</p>
+                <div>-</div>
+                <h3>Q: "About wedding gifts..."</h3>
+                <p>A: Rather than a registry, we've set up a sweet little Wishing Well for our honeymoon adventures! But honestly, your presence is the best present! 🎁</p>
+                <div>-</div>
+                <h3>Got more questions? We'd love to hear from you! Don't be shy - just reach out to us directly! We're here to help make this celebration amazing for everyone! 💕</h3>
+        </div>
+    </div>
+</div>
 
 <script>
 
@@ -488,7 +583,7 @@ $(document).ready(function(){
 <div class="sectionHead anibox">
     <div class="inv">마음 전하실 곳</div>
     <span class="name">Wishing Well</span>
-        <div class="sectionDesc">While your presence on our special day is truly all we could ask for, if you would like to contribute to our new beginning, we will have a wishing well at our reception.<br/>Alternatively, you may use our bank details below.<br/><br/></div>
+        <div class="sectionDesc">While your presence on our special day is truly all we could ask for, if you would like to contribute to our new beginning,<br/> we will have a wishing well at our reception.<br/>Alternatively, you may use our bank details below.<br/><br/></div>
         </div>
     </div>
 
@@ -808,6 +903,10 @@ function swipeGallery02() {
     $(".gallGridWrapper .item").click(function(){
         zoomGallOpen($(this).index());
     });
+
+
+
+
 
 //=============================================
 // 페이지가 샤르륵 나타나는 효과
